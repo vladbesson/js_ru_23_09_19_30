@@ -10,7 +10,8 @@ export default class CommentList extends Component {
     render() {
         const { comments } = this.props
         const { isOpen } = this.state
-
+        //лучше в Comment просто объект comment передать
+        //+comments может быть undefind, будет ошибка
         const commentComponents = comments.map(comment => <li key={comment.id}><Comment user = {comment.user} text = {comment.text} /></li>)
         const body = isOpen ? <section><ul>{commentComponents}</ul></section> : null
 
