@@ -4,8 +4,8 @@ export default class Comment extends Component {
 
     render() {
         //здесь почему то не сработала попытка деструктуризации const { data } = this.props
-        let user = this.props.user
-        let text = this.props.text
+        let user = this.props.comment.user
+        let text = this.props.comment.text
 
         return (
             <div>

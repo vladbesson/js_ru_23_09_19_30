@@ -14,7 +14,7 @@ export default class Article extends Component {
         const { article } = this.props
         const { isOpen } = this.state
 
-        const body = isOpen ? <section><div>{article.text}</div><CommentList comments = {article.comments}/></section> : null
+        const body = isOpen ? <section><div>{article.text}</div>{article.comments ? <CommentList comments = {article.comments}/> : <p>No comments</p>}</section> : null
 
         return (
             <div>
