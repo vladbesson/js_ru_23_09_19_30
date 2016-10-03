@@ -11,10 +11,15 @@ export default function accordion(Component) {
         }
 
         toggleOpenArticle = id => ev => {
-            this.setState({
-                openArticleId: id
-            })
+            if( id == this.state.openArticleId ) {
+                this.setState({
+                    openArticleId: null
+                })
+            } else {
+                this.setState({
+                    openArticleId: id
+                })
+            }
         }
-
     }
 }
