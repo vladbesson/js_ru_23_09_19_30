@@ -2,7 +2,7 @@ import React from 'react'
 
 
 class AddComment extends React.Component {
-
+    //хорошо, но еще user нужен
     state = {
         commentText: ''
     }
